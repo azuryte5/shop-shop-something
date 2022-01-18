@@ -8,7 +8,7 @@ import { QUERY_PRODUCTS } from '../../utils/queries';
 import spinner from '../../assets/spinner.gif';
 
 function ProductList(
-  // {currentCategory}
+  // {currentCategory} this is part of snapshot but should have been removed.
   ) {
   const [state, dispatch] = useStoreContext();
 
