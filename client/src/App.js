@@ -14,10 +14,13 @@ import NoMatch from './pages/NoMatch';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Nav from './components/Nav';
-import { StoreProvider } from './utils/GlobalState';
+// import { StoreProvider } from './utils/GlobalState';
+import { Provider } from 'react-redux'
+import {createStore, applyMiddleware} from 'redux';
 import Success from './pages/Success';
 import OrderHistory from './pages/OrderHistory';
-import { Counter } from './features/counter/Counter';
+// import { Counter } from './features/counter/Counter';
+// import { applyMiddleware } from '@reduxjs/toolkit';
 
 const httpLink = createHttpLink({
   uri: '/graphql',
@@ -38,13 +41,14 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
+const store = createStore(()=> [], {}, applyMiddleware())
 function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
         <div>
-          <StoreProvider>
-            <Counter />
+          <Provider store={store}>
+            {/* <Counter /> */}
             <Nav />
             <Switch>
               <Route exact path="/" component={Home} />
@@ -55,7 +59,7 @@ function App() {
               <Route exact path="/products/:id" component={Detail} />
               <Route component={NoMatch} />
             </Switch>
-          </StoreProvider>
+          </Provider>
         </div>
       </Router>
     </ApolloProvider>
