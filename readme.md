@@ -13,7 +13,7 @@
 ## Links
 The URL of the GitHub repository: https://github.com/azuryte5/shop-shop-something
 
-The link to the deployed Resume: https://shop-shop-something.herokuapp.com/
+The link to the deployed App: https://shop-shop-something.herokuapp.com/
 
 -----
 ## Usage
