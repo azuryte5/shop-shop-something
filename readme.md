@@ -17,13 +17,11 @@ The link to the deployed Resume: https://shop-shop-something.herokuapp.com/
 
 -----
 ## Usage
-Explain and identify use cases for global state management.
-
-Use the Context API and React Hooks to manage Redux-like global state in a React application.
-
-Implement the Stripe payment platform in a MERN application.
+This app was intial set up with a global store and then switched over to redux.
 
 ![shop-store](https://user-images.githubusercontent.com/85147307/150153638-91fc7f8f-129a-4b98-80f2-080d17360f26.png)
+![redux example](https://user-images.githubusercontent.com/85147307/151736739-f270e70a-e6fa-4f61-a0af-373f37dd6a3a.png)
+
 -----
 ## Tech Used 
 - Mongo DB
@@ -38,7 +36,7 @@ Implement the Stripe payment platform in a MERN application.
 - Jest
 - Concurrently
 - JsonWebtoken
-
+- Redux 
 ## User Story
 
 ```md
@@ -51,18 +49,19 @@ SO THAT my website's state management is taken out of the React ecosystem
 ```md
 GIVEN an e-commerce platform that uses Redux to manage global state
 WHEN I review the app’s store
-[ ]THEN I find that the app uses a Redux store instead of the Context API
+[✅]THEN I find that the app uses a Redux store instead of the Context API
 WHEN I review the way the React front end accesses the store
-[ ]THEN I find that the app uses a Redux provider
+[✅]THEN I find that the app uses a Redux provider
 WHEN I review the way the app determines changes to its global state
-[ ]THEN I find that the app passes reducers to a Redux store instead of using the Context API
+[✅]THEN I find that the app passes reducers to a Redux store instead of using the Context API
 WHEN I review the way the app extracts state data from the store
-[ ]THEN I find that the app uses Redux instead of the Context API
+[✅]THEN I find that the app uses Redux instead of the Context API
 WHEN I review the way the app dispatches actions
-[ ]THEN I find that the app uses Redux instead of the Context API
+[✅ ]THEN I find that the app uses Redux instead of the Context API
 ```
 
 ----
 ## Credits
 Made by Andrew Lefebvre 🛍️
 -----
+

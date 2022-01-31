@@ -1,5 +1,5 @@
 import React, { createContext, useContext } from "react";
-import { useProductReducer } from './reducers'
+import { useProductReducer } from "./reducers";
 
 const StoreContext = createContext();
 const { Provider } = StoreContext;
@@ -10,7 +10,7 @@ const StoreProvider = ({ value = [], ...props }) => {
     cart: [],
     cartOpen: false,
     categories: [],
-    currentCategory: '',
+    currentCategory: "",
   });
 
   return <Provider value={[state, dispatch]} {...props} />;
@@ -21,3 +21,6 @@ const useStoreContext = () => {
 };
 
 export { StoreProvider, useStoreContext };
+
+// But in short, what we did here was create our own functionality to manage state 
+// at a global level and make it available to all of our other components through a special <Provider> component.
